@@ -17,7 +17,7 @@ const ProjectCard = ({ title, description, tags, index, github, live, image }) =
             <div className="w-full h-56 md:h-96 bg-gray-100 border-4 border-black overflow-hidden relative group">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
                 <div className="flex items-center justify-center h-full font-black text-gray-300 italic text-2xl md:text-4xl">
-                    {image}
+                    <img src={image} title={title} />
                 </div>
 
                 <div className="absolute bottom-3 right-3 flex gap-2 z-20">
@@ -56,21 +56,23 @@ const Projects = () => {
             className="relative min-h-screen w-full py-20 px-4 md:px-12 bg-fixed bg-center bg-no-repeat bg-[length:auto_100%] md:bg-cover"
             style={{ backgroundImage: `url(${projectBg})` }}
         >
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent pointer-events-none z-0" />
             <div className="max-w-4xl mx-auto mb-16">
                 <motion.h2
                     initial={{ x: -100 }}
                     whileInView={{ x: 0 }}
-                    className="text-5xl md:text-9xl font-black italic text-white uppercase inline-block bg-red-600 px-6 py-2 border-[4px] md:border-[6px] border-black shadow-[8px_8px_0px_#000] md:shadow-[12px_12px_0px_#000] -rotate-3"
+                    className="font-comic text-5xl md:text-9xl font-black italic text-white uppercase inline-block bg-red-600 px-6 py-2 border-[4px] md:border-[6px] border-black shadow-[8px_8px_0px_#000] md:shadow-[12px_12px_0px_#000] -rotate-3"
                 >
                     Projects
                 </motion.h2>
             </div>
 
-            <div className="max-w-4xl mx-auto flex flex-col gap-12 md:gap-20">
+            <div className=" max-w-4xl mx-auto flex flex-col gap-12 md:gap-20">
                 {projectsData.map((proj, i) => (
                     <ProjectCard key={i} index={i} {...proj} />
                 ))}
             </div>
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-0" />
         </section>
     );
 };

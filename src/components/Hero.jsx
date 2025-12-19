@@ -49,7 +49,7 @@ const Hero = () => {
                     backgroundImage: `url(${heroBg})`,
                     x: bgX,
                     y: bgY,
-                    scale: 1.2 // Increased scale for mobile safety
+                    scale: 1.2
                 }}
                 className="absolute inset-0 bg-cover bg-center"
             />
@@ -61,9 +61,9 @@ const Hero = () => {
                 <motion.h1
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="text-5xl sm:text-7xl md:text-[10rem] font-black italic uppercase text-yellow-400 leading-none text-center"
+                    className="font-hero text-5xl sm:text-7xl md:text-[10rem] font-black italic uppercase text-yellow-400 leading-none text-center"
                     style={{
-                        textShadow: '6px 6px 0px #000', // Smaller shadow for mobile
+                        textShadow: '6px 6px 0px #000',
                         WebkitTextStroke: window.innerWidth < 768 ? '2px black' : '4px black'
                     }}
                 >

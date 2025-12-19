@@ -7,6 +7,8 @@ const Contact = () => {
             className="relative min-h-screen w-full flex items-center justify-center py-20 px-4 bg-cover bg-center"
             style={{ backgroundImage: `url(${contactBg})` }}
         >
+            <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black/80 to-transparent pointer-events-none z-0" />
+
             <div className="absolute inset-0 bg-black/10 md:bg-transparent" />
 
             <motion.div
@@ -16,7 +18,7 @@ const Contact = () => {
                 className="relative z-10 max-w-2xl w-full bg-white border-[6px] border-black p-8 md:p-12 shadow-[20px_20px_0px_#000] text-center"
             >
                 <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-red-600 border-4 border-black px-8 py-2 shadow-[6px_6px_0px_#000] -rotate-2">
-                    <h2 className="text-4xl md:text-6xl font-black italic text-white uppercase tracking-tighter">
+                    <h2 className="font-hero text-4xl md:text-6xl font-black italic text-white uppercase tracking-tighter">
                         CONTACT
                     </h2>
                 </div>

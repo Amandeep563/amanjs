@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@theme {
+  --font-comic: "Bangers", system-ui;
+  --font-hero: "Luckiest Guy", system-ui;
+}
