@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import heroBg from '../assets/hero.jpg';
+import heroBg from '../assets/hero.webp';
 import reactIcon from '../assets/React_light.svg';
 import tailwindIcon from '../assets/tailwindcss.svg';
 import html from "../assets/html5.svg"
