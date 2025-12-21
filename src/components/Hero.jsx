@@ -81,7 +81,7 @@ const Hero = () => {
                     className="mt-4 bg-black text-white px-4 md:px-8 py-2 -rotate-1 shadow-[5px_5px_0px_#eab308] max-w-[90%]"
                 >
                     <p className="text-sm md:text-xl font-bold uppercase tracking-widest text-center">
-                        Full satck Developer // Problem Solver
+                        Full Stack Developer // Problem Solver
                     </p>
                 </motion.div>
 
