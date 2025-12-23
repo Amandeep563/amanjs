@@ -1,30 +1,21 @@
+import { useState, useEffect } from 'react'
+import Loading from "./components/Loading"
 import Contact from "./components/Contact"
 import About from "./components/About"
 import Hero from "./components/Hero"
 import Projects from "./components/Projects"
 
 const App = () => {
-    // const [loading, setLoading] = useState(true)
-    //
-    // useEffect(() => {
-    //     const timer = setTimeout(() => setLoading(false), 2000);
-    //     return () => clearTimeout(timer)
-    // }, []);
-    //
-    // if (loading) {
-    //     return (
-    //         <div className="h-screen w-full bg-black flex items-center justify-center">
-    //             <motion.h1
-    //                 initial={{ scale: 0 }}
-    //                 animate={{ scale: [1, 1.2, 1] }}
-    //                 transition={{ repeat: Infinity }}
-    //                 className="text-yellow-400 font-comic text-6xl italic"
-    //             >
-    //                 LOADING...
-    //             </motion.h1>
-    //         </div>
-    //     )
-    // }
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 2300);
+        return () => clearTimeout(timer)
+    }, []);
+
+    if (loading) {
+        return <Loading />
+    }
     return (
         <main className="bg-black">
             <section id="hero" className="relative h-screen">

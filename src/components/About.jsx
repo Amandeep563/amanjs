@@ -3,7 +3,7 @@ import profileImg from "../assets/profile-1.avif";
 
 const About = () => {
     return (
-        <div className="min-h-screen w-full bg-neutral-900 py-20 px-4 md:px-10 flex flex-col items-center justify-center overflow-hidden">
+        <div className="min-h-screen w-full flex-grow bg-neutral-900 py-20 px-4 md:px-10 flex flex-col items-center justify-center overflow-hidden">
             <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10 md:gap-20">
 
                 <motion.div
