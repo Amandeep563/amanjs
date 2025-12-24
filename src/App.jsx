@@ -1,3 +1,4 @@
+import Lenis from 'lenis'
 import { useState, useEffect } from 'react'
 import Loading from "./components/Loading"
 import Contact from "./components/Contact"
@@ -12,6 +13,21 @@ const App = () => {
         const timer = setTimeout(() => setLoading(false), 2300);
         return () => clearTimeout(timer)
     }, []);
+
+    useEffect(() => {
+        const lenis = new Lenis()
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+        return () => {
+            lenis.destroy()
+        }
+    }, [])
 
     if (loading) {
         return <Loading />
