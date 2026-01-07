@@ -29,7 +29,7 @@ const Hero = () => {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: { staggerChildren: 0.1 }
+            transition: { staggerChildren: 0.1, delayChildren: 1 }
         }
     };
 
@@ -61,6 +61,7 @@ const Hero = () => {
                 <motion.h1
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.5 }}
                     className="font-hero text-5xl sm:text-7xl md:text-[10rem] font-black italic uppercase text-yellow-400 leading-none text-center"
                     style={{
                         textShadow: '6px 6px 0px #000',
@@ -73,7 +74,7 @@ const Hero = () => {
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 }}
+                    transition={{ delay: 0.8 }}
                     className="mt-4 bg-black text-white px-4 md:px-8 py-2 -rotate-1 shadow-[5px_5px_0px_#eab308] max-w-[90%]"
                 >
                     <p className="text-sm md:text-xl font-bold uppercase tracking-widest text-center">

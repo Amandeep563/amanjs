@@ -3,7 +3,11 @@ import loaderImg from "../assets/loader.avif";
 
 const Loading = () => {
     return (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center font-sans">
+        <motion.div
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center font-sans"
+        >
             <div
                 className="absolute inset-0 bg-cover bg-center z-0"
                 style={{ backgroundImage: `url(${loaderImg})` }}
@@ -43,7 +47,7 @@ const Loading = () => {
                     Loading Multiverse...
                 </motion.p>
             </motion.div>
-        </div>
+        </motion.div>
     );
 };
 
