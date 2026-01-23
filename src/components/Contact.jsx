@@ -59,7 +59,7 @@ const Contact = () => {
 
                 <div className="mt-12 pt-8 border-t-4 border-dotted border-black">
                     <p className="font-black text-xs md:text-sm uppercase opacity-60 tracking-widest">
-                        Amandeep // All Rights Reserved. // 2025
+                        Amandeep // All Rights Reserved. // 2026
                     </p>
                 </div>
             </motion.div>
