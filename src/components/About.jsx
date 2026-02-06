@@ -20,6 +20,8 @@ const About = () => {
                             <img
                                 src={profileImg}
                                 alt="Profile"
+                                loading="lazy"
+                                decoding="async"
                                 className="w-72 h-72 md:w-80 md:h-80 object-cover grayscale-0 hover:grayscale-0 transition-all duration-500"
                             />
                             <div className="absolute inset-0 ring-1 ring-inset ring-black/10"></div>

@@ -47,11 +47,11 @@ const Hero = () => {
             onMouseMove={handleMouseMove}
             className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-neutral-900 font-sans cursor-default"
         >
-            <div
-                style={{
-                    backgroundImage: `url(${heroImg})`,
-                }}
-                className="absolute inset-0 bg-cover bg-center"
+            <img
+                src={heroImg}
+                alt="Background"
+                className="absolute inset-0 w-full h-full object-cover"
+                fetchPriority="high"
             />
 
             <motion.div

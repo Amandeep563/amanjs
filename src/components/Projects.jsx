@@ -18,7 +18,7 @@ const ProjectCard = ({ title, description, tags, index, github, live, image }) =
             <div className="w-full h-56 md:h-96 bg-gray-100 border-4 border-black overflow-hidden relative group">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
                 <div className="flex items-center justify-center h-full font-black text-gray-300 italic text-2xl md:text-4xl">
-                    <img src={image} title={title} />
+                    <img src={image} title={title} loading="lazy" decoding="async" />
                 </div>
 
                 <div className="absolute bottom-3 right-3 flex gap-2 z-20">

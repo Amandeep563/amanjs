@@ -1,11 +1,12 @@
 import Lenis from 'lenis'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense, lazy } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
 import Loading from "./components/Loading"
-import Contact from "./components/Contact"
-import About from "./components/About"
 import Hero from "./components/Hero"
-import Projects from "./components/Projects"
+
+const About = lazy(() => import("./components/About"));
+const Projects = lazy(() => import("./components/Projects"));
+const Contact = lazy(() => import("./components/Contact"));
 
 const App = () => {
     const [loading, setLoading] = useState(true)
@@ -51,15 +52,21 @@ const App = () => {
                         </section>
 
                         <section id="about" className="relative w-full">
-                            <About />
+                            <Suspense fallback={null}>
+                                <About />
+                            </Suspense>
                         </section>
 
                         <section id="projects" className="relative">
-                            <Projects />
+                            <Suspense fallback={null}>
+                                <Projects />
+                            </Suspense>
                         </section>
 
                         <section id="contact" className="relative h-screen">
-                            <Contact />
+                            <Suspense fallback={null}>
+                                <Contact />
+                            </Suspense>
                         </section>
                     </motion.div>
                 )}
